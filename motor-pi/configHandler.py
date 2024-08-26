@@ -16,8 +16,7 @@ def create_config():
     
     config['MotorControl'] = {'in1': 0, 'in2': 0}
     config['Others'] = {'buzzerPin': 0,
-                          'startButton': 0, 'directionSwitch': 0, 'commonSwitch': 0, "c1Mode": 0, "c2Mode": 0}
- 
+                          'startButton': 0, 'directionSwitch': 0, 'commonSwitch': 0, "c1Mode": 0, "c2Mode": 0, "dataFetchFreq":2}
     # Write the configuration to a file
     with open('config.ini', 'w') as configfile:
         config.write(configfile)
