@@ -1,0 +1,242 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/115.0" version="24.7.7">
+  <diagram name="Page-1" id="yupTHqTDVHgXMbinXAXO">
+    <mxGraphModel dx="3215" dy="1382" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-1" target="C8lAPnQL2EUoFx4NHHbo-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-2" target="C8lAPnQL2EUoFx4NHHbo-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-2" target="C8lAPnQL2EUoFx4NHHbo-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-2" value="Log Starting Area Gird Length" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-4" target="C8lAPnQL2EUoFx4NHHbo-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-4" value="Should be able to estimate the &#39;start grid&#39; and the length of the quadrent" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="190" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-7" value="&lt;div&gt;log it in array&lt;br&gt;&lt;/div&gt;&lt;div&gt;--&amp;gt; Debug log&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="545" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-9" value="&lt;div&gt;Data Storage Types:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1 = Wall&lt;/div&gt;&lt;div&gt;0 = Safe&lt;/div&gt;&lt;div&gt;2 = Start Position&lt;/div&gt;&lt;div&gt;3 - Parking lot&lt;br&gt;&lt;/div&gt;&lt;div&gt;4 = Position&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="80" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-11" target="C8lAPnQL2EUoFx4NHHbo-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-11" value="Move slowly till left/right sensor detects a large change in value" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="280" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-12" target="C8lAPnQL2EUoFx4NHHbo-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-12" value="Check the button state for rotational direction" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="380" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-13" value="&lt;div&gt;Button State:&lt;/div&gt;&lt;div&gt;Challenge&lt;/div&gt;&lt;div&gt;Rotation Direction&lt;/div&gt;&lt;div&gt;Start&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="80" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-15" target="C8lAPnQL2EUoFx4NHHbo-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-15" value="&lt;div&gt;Possible consideration:&lt;/div&gt;&lt;div&gt;Using camera data to sense the edge before we see it ON ULT&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="121" y="365" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-18" target="C8lAPnQL2EUoFx4NHHbo-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-18" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="470" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-21" value="&lt;div&gt;Execute Rotate Around Sequence&lt;/div&gt;&lt;div&gt;&lt;b&gt;TBD&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="110" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.45;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-18" target="C8lAPnQL2EUoFx4NHHbo-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-24" target="C8lAPnQL2EUoFx4NHHbo-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-24" target="C8lAPnQL2EUoFx4NHHbo-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-24" value="Execute Normal Turn Sequence - IMU Deppendncy needed" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="490" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-26" target="C8lAPnQL2EUoFx4NHHbo-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-26" value="Turn Complete " style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-28" target="C8lAPnQL2EUoFx4NHHbo-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-28" value="Record the straight length" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-31" value="Log it to coordnits" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-33" target="C8lAPnQL2EUoFx4NHHbo-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-33" target="C8lAPnQL2EUoFx4NHHbo-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-33" value="Camera Input" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-36" target="C8lAPnQL2EUoFx4NHHbo-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-36" value="&lt;div&gt;Find the relation of objects compared to the camera.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;Left / Center / Right" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="325" y="750" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-39" value="Swerve Left --&amp;gt; Right" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="860" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-41" target="C8lAPnQL2EUoFx4NHHbo-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-41" value="Camera Center --&amp;gt; Detection raidus and crosshair logic" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-43" target="C8lAPnQL2EUoFx4NHHbo-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-43" value="Move left/right --&amp;gt; Detect which is closest.&lt;br&gt;Overlay ULT data with camera data" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="315" y="1020" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-45" target="C8lAPnQL2EUoFx4NHHbo-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-45" value="&lt;div&gt;Once all traffic cones are mapped and once we know the width of that track section&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="320" y="1150" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-47" target="C8lAPnQL2EUoFx4NHHbo-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-47" value="Should be able to know where to turn L/R where" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-49" target="C8lAPnQL2EUoFx4NHHbo-24">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="1410" />
+              <mxPoint x="880" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-49" target="C8lAPnQL2EUoFx4NHHbo-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-49" value="Increment turn counter on next turn detected" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.997;entryY=0.63;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-53" target="C8lAPnQL2EUoFx4NHHbo-72">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="1600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-53" value="On finish X laps" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-55" target="C8lAPnQL2EUoFx4NHHbo-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-55" target="C8lAPnQL2EUoFx4NHHbo-60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-55" value="Check for parking lot" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-57" target="C8lAPnQL2EUoFx4NHHbo-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-57" value="SLOW-SPEED-CURVE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="100" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-60" target="C8lAPnQL2EUoFx4NHHbo-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-60" value="NORMAL-SPEED-CURVE" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-90" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-62" value="" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="-90" y="970" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-66" target="C8lAPnQL2EUoFx4NHHbo-72">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="1570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-66" value="Map for that outlier data" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="980" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-72" target="C8lAPnQL2EUoFx4NHHbo-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-72" value="Navgate to parking lot" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-73" value="Need to program the sequence of parking" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-76" target="C8lAPnQL2EUoFx4NHHbo-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-76" value="&lt;div&gt;After First lap,&lt;/div&gt;&lt;div&gt;should be able to estimate the coordinates/distances&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="1480" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.443;entryY=0.07;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-49" target="C8lAPnQL2EUoFx4NHHbo-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-78" target="C8lAPnQL2EUoFx4NHHbo-81">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-78" value="Need to talk with engineer to find ideal distance given we know everything in an array representing 1x1c, squares" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="485" y="1580" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.748;entryY=0.143;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-76" target="C8lAPnQL2EUoFx4NHHbo-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-81" target="C8lAPnQL2EUoFx4NHHbo-84">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C8lAPnQL2EUoFx4NHHbo-81" target="C8lAPnQL2EUoFx4NHHbo-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-81" value="Software needs to keep the ULT Distance and ideal distance within 1 +/- cm" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="485" y="1730" width="200" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-84" value="If not --&amp;gt; Turn in that direction to ccompensate" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1704" width="160" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-86" value="If values go really wrong, swap to active avoidance " style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1740" width="160" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="C8lAPnQL2EUoFx4NHHbo-88" value="Once full route known, can use AD to plan the paths" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1850" width="215" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
