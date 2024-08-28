@@ -16,18 +16,35 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M"
 )
 
-#! Varrible Configurations (Please move to config file later)
+
+#! Varrible Decalarions that will change bellow:
+
+#* Decaluartion
+# Motor = Motor, need set enable
+# Servo= angular serv
+motor = gpio.Motor(forward=0,backward=0,enable=0)
+servo= gpio.AngularServo(17, min_angle=0, max_angle=90, initial_angle=45)
+
 #* carSpeeds
-CARSPEED = 5
+CARSPEED = 1
 
 
 #* Turn Prep
 turnPrepDistance = 0
 #* Data Get Frequiency
 FREQUENCY = 1
+
+#TODO Add API ENd Point to other pi 
+
+#* Note to organsiers/markers: The pi is not over wifi but over withenet patch cables 
 endPoint = "`"
+
+
 # 10 CM  before turn
 WALLFWD = 10
+
+#! End of varribles that may possibly change
+
 #* Following car direction
 #* wallMode[0] = The starting position
 
@@ -46,7 +63,7 @@ def challenge1Movement(config):
     
     # wallMode[1] = The place infront etc
     wallMode = [0,0,0,0]
-    # If all the walls are counted
+    # If all the walfreqls are counted
     wallModeReady= False
     # Count the rounds
     roundsDone = 0
