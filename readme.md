@@ -2,9 +2,6 @@
 
 ## Project Structure
 
-### Documentation
-#### Overview
-The `./docs/` directory contains project documentation, including notes, guidelines, and specifications.
 
 ### Motor Control Raspberry Pi
 #### Challenge-Specific Code
