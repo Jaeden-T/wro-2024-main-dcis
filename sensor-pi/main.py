@@ -19,6 +19,49 @@ def getUlt():
     return N.distance, S.distance, E. distance, W.distance
 #* Will be changed afte rtime
 
+
+
+
+
+
+
+
+# Global variables for storing offsets and angles
+gyro_x_offset = 0.0
+gyro_y_offset = 0.0
+gyro_z_offset = 0.0
+
+angle_x = 0.0
+angle_y = 0.0
+angle_z = 0.0
+
+last_time = None
+
+def calibrate_gyro(sensor, num_samples=100):
+    global gyro_x_offset, gyro_y_offset, gyro_z_offset
+
+    gyro_x_offset = 0.0
+    gyro_y_offset = 0.0
+    gyro_z_offset = 0.0
+
+    print("Calibrating gyroscope... Please keep the sensor stationary.")
+    for _ in range(num_samples):
+        gyro_data = sensor.get_gyro_data()
+        gyro_x_offset += gyro_data['x']
+        gyro_y_offset += gyro_data['y']
+        gyro_z_offset += gyro_data['z']
+        sleep(0.01)
+
+    gyro_x_offset /= num_samples
+    gyro_y_offset /= num_samples
+    gyro_z_offset /= num_samples
+
+    # Reset angles after calibration
+    global angle_x, angle_y, angle_z
+    angle_x = 0.0
+    angle_y = 0.0
+    angle_z = 0.0
+
 class dataStgoreObject():
     def __init__(self):
         self.dataPointOne = 0
@@ -57,6 +100,46 @@ northStore = dataStgoreObject()
 southStore = dataStgoreObject()
 eastStore = dataStgoreObject()
 westStore = dataStgoreObject()
+
+@app.get("/calibrate")
+async def calibrate():
+    calibrate_gyro(sensor)
+    return {
+        "message": "Gyroscope calibrated successfully.",
+        "gyro_x_offset": gyro_x_offset,
+        "gyro_y_offset": gyro_y_offset,
+        "gyro_z_offset": gyro_z_offset
+    }
+
+
+@app.get("/imuData")
+async def imuData():
+    global last_time, angle_x, angle_y, angle_z
+
+    if last_time is None:
+        last_time = time()
+
+    # Get the current time and calculate the time elapsed
+    current_time = time()
+    dt = current_time - last_time
+    last_time = current_time
+
+    # Get gyroscope data (angular velocity in degrees per second)
+    gyro_data = sensor.get_gyro_data()
+    gyro_x = gyro_data['x'] - gyro_x_offset
+    gyro_y = gyro_data['y'] - gyro_y_offset
+    gyro_z = gyro_data['z'] - gyro_z_offset
+
+    # Integrate to get the angle change (angular velocity * time)
+    angle_x += gyro_x * dt
+    angle_y += gyro_y * dt
+    angle_z += gyro_z * dt
+
+    return {
+        "x_rotation": round(angle_x, 2),
+        "y_rotation": round(angle_y, 2),
+        "z_rotation": round(angle_z, 2)
+    }
 
 #! End Of Data Stores
 @app.get("/data/")
