@@ -101,9 +101,6 @@ callingUlt = 0
 
 dataToSend = []
 
-#! Data Stores
-imuStore = dataStgoreObject()
-
 
 
 @app.get("/calibrate")
