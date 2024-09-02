@@ -16,12 +16,6 @@ def getData():
     imu = mpu6050(0x68).get_gyro_data()
     return N.distance, S.distance, E. distance, W.distance, imu
 
-def getUlt():
-    return N.distance, S.distance, E. distance, W.distance
-#* Will be changed afte rtime
-
-
-
 
 
 
@@ -63,18 +57,32 @@ def calibrate_gyro(sensor, num_samples=100):
     angle_y = 0.0
     angle_z = 0.0
 
-class dataStgoreObject():
+
+# Track num of calls
+callingUlt = 0
+
+class DataStoreObject:
     def __init__(self):
-        self.dataPointOne = 0
-        self.dataPointTwo = 0
-        
-    def cleanData(self ,data: float):
-        return ((self.dataPointOne + self.dataPointTwo +data) /3)
-    def updateData(self, data:float):
+        self.dataPointOne = 0.0
+        self.dataPointTwo = 0.0
+
+    def cleanData(self, data: float):
+        # Calculate the moving average with the current and previous two data points
+        return (self.dataPointOne + self.dataPointTwo + data) / 3
+
+    def updateData(self, data: float):
         self.dataPointOne = self.dataPointTwo
         self.dataPointTwo = data
 
+# Create stores ultrasonic sensor data
+northStore = DataStoreObject()
+southStore = DataStoreObject()
+eastStore = DataStoreObject()
+westStore = DataStoreObject()
 
+# Function to get ultrasonic sensor data
+def getUlt():
+    return N.distance, S.distance, E.distance, W.distance
 
 
     
@@ -97,10 +105,6 @@ dataToSend = []
 imuStore = dataStgoreObject()
 
 
-northStore = dataStgoreObject()
-southStore = dataStgoreObject()
-eastStore = dataStgoreObject()
-westStore = dataStgoreObject()
 
 @app.get("/calibrate")
 async def calibrate():
@@ -222,34 +226,50 @@ async def imu():
 
 @app.get("/ult/")
 async def ult():
-    north, south, east, west = getUlt()
     global callingUlt
+    north, south, east, west = getUlt()
+    
     if callingUlt < 2:
+        # First two readings, store the raw data
         if callingUlt == 0:
             northStore.dataPointOne = north
             southStore.dataPointOne = south
             eastStore.dataPointOne = east
             westStore.dataPointOne = west
-        if callingUlt == 1:
+        elif callingUlt == 1:
             northStore.dataPointTwo = north
             southStore.dataPointTwo = south
             eastStore.dataPointTwo = east
             westStore.dataPointTwo = west
+
+        # Increment the call counter
+        callingUlt += 1
+
+        return {
+            "ult_N": north,
+            "ult_S": south,
+            "ult_E": east,
+            "ult_W": west
+        }
     else:
+        # Calculate the moving average
         cleanNorth = northStore.cleanData(north)
         cleanSouth = southStore.cleanData(south)
         cleanEast = eastStore.cleanData(east)
         cleanWest = westStore.cleanData(west)
-        
+
+        # Update the stored data with the new readings
         northStore.updateData(north)
-        westStore.updateData(west)
-        eastStore.updateData(east)
         southStore.updateData(south)
-        
-    
-    callingUlt += 1
-    return {"ult_N": cleanNorth, "ult_S": cleanSouth, "ult_E": cleanEast, "ult_W": cleanWest}
-        
-        
-    
-    
+        eastStore.updateData(east)
+        westStore.updateData(west)
+
+        # Increment the call counter
+        callingUlt += 1
+
+        return {
+            "ult_N": cleanNorth,
+            "ult_S": cleanSouth,
+            "ult_E": cleanEast,
+            "ult_W": cleanWest
+        }
