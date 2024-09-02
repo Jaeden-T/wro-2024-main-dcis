@@ -222,6 +222,7 @@ async def imu():
 @app.get("ult")
 async def ult():
     north, south, east, west = getUlt()
+    global callingUlt
     if callingUlt < 2:
         if callingUlt == 0:
             northStore.dataPointOne = north
