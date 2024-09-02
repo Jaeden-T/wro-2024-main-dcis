@@ -2,7 +2,8 @@ from fastapi import FastAPI
 from gpiozero import DistanceSensor
 from mpu6050 import mpu6050
 app = FastAPI()
-
+sensor = mpu6050(0x68)
+from time import sleep, time
 N = DistanceSensor(echo=17, trigger=22)
 S = DistanceSensor(echo=16, trigger=24)
 E = DistanceSensor(echo=25, trigger=23)
