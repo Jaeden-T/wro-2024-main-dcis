@@ -3,10 +3,10 @@ from gpiozero import DistanceSensor
 from mpu6050 import mpu6050
 app = FastAPI()
 
-N = DistanceSensor(echo=17, trigger=4)
-S = DistanceSensor(echo=17, trigger=4)
-E = DistanceSensor(echo=17, trigger=4)
-W = DistanceSensor(echo=17, trigger=4)
+N = DistanceSensor(echo=17, trigger=22)
+S = DistanceSensor(echo=16, trigger=24)
+E = DistanceSensor(echo=25, trigger=23)
+W = DistanceSensor(echo=5, trigger=27)
 
 #* Make Defeintiions to update
 def getData():
@@ -117,7 +117,7 @@ async def data():
     }
 
 
-@pp.get("/test/")
+@app.get("/test/")
 async def test():
     return {"test": 0}
 @app.get("/imu/")
