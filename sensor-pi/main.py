@@ -219,7 +219,7 @@ async def imu():
     callingImu +=1    
     return {"imu": cleanValue}
 
-@app.get("ult")
+@app.get("/ult/")
 async def ult():
     north, south, east, west = getUlt()
     global callingUlt
