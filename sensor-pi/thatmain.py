@@ -104,7 +104,7 @@ dataToSend = []
 
 
 @app.get("/calibrate")
-async def calibrate():
+def calibrate():
     calibrate_gyro(sensor)
     return {
         "message": "Gyroscope calibrated successfully.",
@@ -114,8 +114,8 @@ async def calibrate():
     }
 
 
-@app.get("/imuData")
-async def imuData():
+@app.get("/imuData") 
+def imuData():
     global last_time, angle_x, angle_y, angle_z
 
     if last_time is None:
@@ -145,7 +145,7 @@ async def imuData():
 
 #! End Of Data Stores
 @app.get("/data/")
-async def data():
+def data():
     north, south, east, west, imu = getData()
     dataToSend = []
     if meth.abs(mean(arrayN) - north) < 0.1:
@@ -202,11 +202,12 @@ async def data():
     }
 
 
-@app.get("/test/")
-async def test():
+@app.get("/test/") 
+def test():
     return {"test": 0}
+
 @app.get("/imu/")
-async def imu():
+def imu():
     imuDataTemp = getImuData()
     if callingImu < 2:
         if callingImu == 0:
@@ -222,7 +223,7 @@ async def imu():
     return {"imu": cleanValue}
 
 @app.get("/ult/")
-async def ult():
+def ult():
     global callingUlt
     north, south, east, west = getUlt()
     
