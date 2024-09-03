@@ -32,7 +32,7 @@ angle_z = 0.0
 
 last_time = None
 
-def calibrate_gyro(sensor, num_samples=100):
+def calibrate_gyro(sensor, num_samples=1000):
     global gyro_x_offset, gyro_y_offset, gyro_z_offset
 
     gyro_x_offset = 0.0
