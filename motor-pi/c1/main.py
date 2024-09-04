@@ -117,13 +117,14 @@ def challenge1Movement():
                     servo.angle - 45
                     motor.forward(CARSPEED)
                     
-                    
+
                 else: #* Else Turn in the direction thats needed
                     if dataStoreObjectArray[-1].ult_E > dataStoreObjectArray[-1].ult_W:
                         servo.angle = 60
                     else:
                         servo.angle = 30
-            
+            else:
+                servo.angle = 75
         
         
         # #* When not in the straights, eg major turn 
