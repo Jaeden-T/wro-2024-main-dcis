@@ -138,7 +138,7 @@ def challenge1Movement():
             #* Wait till its close to the value
             motor.forward(CARSPEED)
             time.sleep(3)
-            while not (meth.isclose(dataStoreObjectArray[-1].imu, 0 )or  meth.isclose(dataStoreObjectArray[-1].imu, 90) or meth.isclose(dataStoreObjectArray[-1].imu, 180) or meth.isclose(dataStoreObjectArray[-1].imu, 360)):
+            if not (meth.isclose(dataStoreObjectArray[-1].imu, 0 )or  meth.isclose(dataStoreObjectArray[-1].imu, 90) or meth.isclose(dataStoreObjectArray[-1].imu, 180) or meth.isclose(dataStoreObjectArray[-1].imu, 360)):
                 motor.forward(CARSPEED)
                 
             #* Once it exits the loop stop turning and reutrn to straight
