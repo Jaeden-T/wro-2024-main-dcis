@@ -100,6 +100,8 @@ def challenge1Movement(servo):
             meth.isclose(imu, -270, abs_tol=tolerance) or
             meth.isclose(imu, 360, abs_tol=tolerance) or
             meth.isclose(imu, -360, abs_tol=tolerance)):
+            #* Once it exits the loop stop turning and reutrn to straight
+            servo.angle = 45
             print("In a straight, continue as normal")
             motor.forward(CARSPEED)
             if meth.isclose(dataStoreObjectArray[-1].imu, 360):
@@ -142,8 +144,7 @@ def challenge1Movement(servo):
             servo.angle = turnAngle
             motor.forward(CARSPEED)
                 
-        #* Once it exits the loop stop turning and reutrn to straight
-        servo.angle = 45
+
     
 
     # if mapped == True:
@@ -196,7 +197,7 @@ def challenge1Movement(servo):
 
                 
             
-            time.sleep(FREQUENCY)
+        time.sleep(FREQUENCY)
 
 
     
