@@ -83,7 +83,7 @@ def challenge1Movement():
             data = requests.get("http://pi3Sense.local:8000/ult").json()
             imu = requests.get("http://pi3Sense.local:8000/imuData").json()
             dataStoreObjectArray.append(DataStoreObject(data["ult_N"]*100, data["ult_S"]*100, data["ult_E"]*100, data["ult_W"]*100, imu["z_rotation"]))
-            print(dataStoreObjectArray[-1])
+            print(dataStoreObjectArray[-1].ult_N)
         except requests.exceptions.RequestException as e:
             logging.error(e)
         
