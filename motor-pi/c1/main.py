@@ -59,6 +59,7 @@ def challenge1Movement():
     print("C1 LOADED")
     mapped = False
 
+    calibrate = requests.get("http://pi3Sense.local:8000/calibrate")
     motor = gpio.Motor(forward=23, backward=24, enable=25)
     
     # wallMode[1] = The place infront etc
@@ -74,14 +75,15 @@ def challenge1Movement():
     
     # Segement 0 is the oriign
     currentSegement = 0
-
+    data = requests.get("http://pi3Sense.local:8000/ult").json()
 
     while True:
-        logging.warning("C1 TRUTH LOOP")
+        print("C1 TRUTH LOOP")
         try:
             data = requests.get("http://pi3Sense.local:8000/ult").json()
-            logging.warning(data)
-            dataStoreObjectArray.append(DataStoreObject(data["ult_N"], data["ult_S"], data["ult_E"], data["ult_W"]))
+            imu = requests.get("http://pi3Sense.local:8000/imuData").json()
+            print(data)
+            dataStoreObjectArray.append(DataStoreObject(data["ult_N"], data["ult_S"], data["ult_E"], data["ult_W", imu["z_rotation"]]))
         except requests.exceptions.RequestException as e:
             logging.error(e)
         
