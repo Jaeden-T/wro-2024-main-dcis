@@ -117,8 +117,10 @@ def challenge1Movement(servo):
                     servo.angle = 45
                     if dataStoreObjectArray[-1].ult_E > dataStoreObjectArray[-1].ult_W:
                         servo.angle = 60
+                        turnAngle = 60
                     else:
                         servo.angle = 30
+                        turnAngle = 30
                     
             else:
                 
@@ -137,13 +139,12 @@ def challenge1Movement(servo):
         else:
             print("Is prolly turning")
             #* Wait till its close to the value
+            servo.angle = turnAngle
             motor.forward(CARSPEED)
-            if not (meth.isclose(dataStoreObjectArray[-1].imu, 0 )or  meth.isclose(dataStoreObjectArray[-1].imu, 90) or meth.isclose(dataStoreObjectArray[-1].imu, 180) or meth.isclose(dataStoreObjectArray[-1].imu, 360)):
-                motor.forward(CARSPEED)
                 
-            #* Once it exits the loop stop turning and reutrn to straight
-            servo.angle = 45
-        
+        #* Once it exits the loop stop turning and reutrn to straight
+        servo.angle = 45
+    
 
     # if mapped == True:
     #     while dataStoreObjectArray[-1].ult_N > WALLFWD:
