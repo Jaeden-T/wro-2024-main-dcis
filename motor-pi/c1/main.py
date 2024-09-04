@@ -112,7 +112,7 @@ def challenge1Movement():
 
             
             #* If its in the straights keep moving FWD
-            while dataStoreObjectArray[-1].ult_N > WALLFWD:
+            if dataStoreObjectArray[-1].ult_N > WALLFWD:
                 if meth.close(dataStoreObjectArray[-1].ult_E, dataStoreObjectArray[-1].ult_W, abs_tol=2): #* If W and E are close, keeping moving fwd
                     motor.forward(CARSPEED)
                     
