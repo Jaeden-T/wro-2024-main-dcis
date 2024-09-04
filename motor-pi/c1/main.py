@@ -55,6 +55,9 @@ def calcWallType(data: DataStoreObject, theCar: car):
     
 
 def challenge1Movement(servo):
+    global turnAngle
+    turnAngle = 45
+    
     print("C1 LOADED")
     mapped = False
 
