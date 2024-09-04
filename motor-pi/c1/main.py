@@ -63,11 +63,11 @@ def challenge1Movement():
     print(calibrate)
     motor = gpio.Motor(forward=23, backward=24, enable=25)
     
-    
+    roundsDone = 0
     if roundsDone == 3:
         return 0
     # Count the rounds
-    roundsDone = 0
+    
     
     # Storing Car Data
     dataStoreObjectArray = [] 
