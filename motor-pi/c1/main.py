@@ -78,6 +78,7 @@ def challenge1Movement(config):
     while True:
         try:
             data = requests.get(endPoint).json()
+            logging.info(data)
             dataStoreObjectArray.append(DataStoreObject(data["ult_N"], data["ult_S"], data["ult_E"], data["ult_W"],data["imu"]))
         except requests.exceptions.RequestException as e:
             logging.error(e)
