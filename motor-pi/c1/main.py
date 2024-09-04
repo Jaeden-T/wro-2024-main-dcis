@@ -83,7 +83,7 @@ def challenge1Movement():
         try:
             data = requests.get("http://pi3Sense.local:8000/ult").json()
             imu = requests.get("http://pi3Sense.local:8000/imuData").json()
-            dataStoreObjectArray.append(DataStoreObject(data["ult_N"], data["ult_S"], data["ult_E"], data["ult_W"], imu["z_rotation"]))
+            dataStoreObjectArray.append(DataStoreObject(data["ult_N"]*100, data["ult_S"]*100, data["ult_E"]*100, data["ult_W"]*100, imu["z_rotation"]))
         except requests.exceptions.RequestException as e:
             logging.error(e)
         
@@ -135,7 +135,7 @@ def challenge1Movement():
                 motor.forward(CARSPEED)
                 
             #* Once it exits the loop stop turning and reutrn to straight
-            theCar.servo.value(0)
+            servo.angle = 45
         
         if meth.isClose(dataStoreObjectArray[-1].imu, 360):
             logging.debug("1 lap done ")
