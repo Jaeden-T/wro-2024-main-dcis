@@ -31,7 +31,7 @@ CARSPEED = 1
 #* Turn Prep
 turnPrepDistance = 0
 #* Data Get Frequiency
-FREQUENCY = 1
+FREQUENCY = 3
 
 #TODO Add API ENd Point to other pi 
 
@@ -84,6 +84,7 @@ def challenge1Movement():
             imu = requests.get("http://pi3Sense.local:8000/imuData").json()
             dataStoreObjectArray.append(DataStoreObject(data["ult_N"]*100, data["ult_S"]*100, data["ult_E"]*100, data["ult_W"]*100, imu["z_rotation"]))
             print(dataStoreObjectArray[-1].ult_N)
+            print(dataStoreObjectArray[-1].imu)
         except requests.exceptions.RequestException as e:
             logging.error(e)
         
@@ -124,6 +125,7 @@ def challenge1Movement():
                     else:
                         servo.angle = 30
             else:
+                print("\n*5")
                 print("Servo Angle Set")
                 servo.angle = 75
         
