@@ -88,7 +88,7 @@ def challenge1Movement(servo):
             print(dataStoreObjectArray[-1].imu)
         except requests.exceptions.RequestException as e:
             logging.error(e)
-        tolerance = 5
+        tolerance = 7
         
         imu = dataStoreObjectArray[-1].imu
         if(meth.isclose(imu, 0, abs_tol=tolerance) or 
@@ -125,12 +125,12 @@ def challenge1Movement(servo):
                 if (dataStoreObjectArray[-1].ult_E - dataStoreObjectArray[-1].ult_W) > 10:
                 
                     print("\n*5")
-                    print("Servo Angle Set")
+                    print("Servo Angle Set - > 10 ")
                     servo.angle = 20
                 if (dataStoreObjectArray[-1].ult_W - dataStoreObjectArray[-1].ult_E) > 10:
                 
                     print("\n*5")
-                    print("Servo Angle Set")
+                    print("Servo Angle Set W - E > 10")
                     servo.angle = 75
         
         #* When not in the straights, eg major turn 
