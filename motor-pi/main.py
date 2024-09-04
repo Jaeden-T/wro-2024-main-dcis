@@ -13,11 +13,11 @@ mode = Button(22)
 servo.angle = 45
 servo.angle = 70
 servo.angle = 20
-servo.close()
+
 button.wait_for_press()
 print("Button pressed")
 if mode.is_pressed== True:
     print("MODE 1 (CHALLEGNE 1)")
-    challenge1Movement()
+    challenge1Movement(servo)
 if mode.is_pressed == False:
     print("MODE 2 (CHALLENGE2)")
