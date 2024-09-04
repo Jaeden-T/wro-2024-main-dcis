@@ -129,7 +129,7 @@ def challenge1Movement():
                 print("Servo Angle Set")
                 servo.angle = 75
         
-        eks
+        
         # #* When not in the straights, eg major turn 
         # else:
         #     print("Is prolly turning")
