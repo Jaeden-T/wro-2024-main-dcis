@@ -81,7 +81,7 @@ def challenge1Movement():
         try:
             data = requests.get("http://pi3Sense.local:8000/ult").json()
             logging.info(data)
-            dataStoreObjectArray.append(DataStoreObject(data["ult_N"], data["ult_S"], data["ult_E"], data["ult_W"],data["imu"]))
+            dataStoreObjectArray.append(DataStoreObject(data["ult_N"], data["ult_S"], data["ult_E"], data["ult_W"]))
         except requests.exceptions.RequestException as e:
             logging.error(e)
         
