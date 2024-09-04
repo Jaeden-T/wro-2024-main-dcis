@@ -7,8 +7,8 @@ mode = Button(22)
 
 button.wait_for_press()
 print("Button pressed")
-if mode == True:
+if mode.is_pressed== True:
     print("MODE 1 (CHALLEGNE 1)")
     challenge1Movement()
-if mode == False:
+if mode.is_pressed == False:
     print("MODE 2 (CHALLENGE2)")
