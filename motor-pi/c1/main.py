@@ -63,10 +63,9 @@ def challenge1Movement():
     print(calibrate)
     motor = gpio.Motor(forward=23, backward=24, enable=25)
     
-    # wallMode[1] = The place infront etc
-    wallMode = [0,0,0,0]
-    # If all the walfreqls are counted
-    wallModeReady= False
+    
+    if roundsDone == 3:
+        return 0
     # Count the rounds
     roundsDone = 0
     
@@ -119,7 +118,7 @@ def challenge1Movement():
             meth.isclose(imu, -270, abs_tol=tolerance) or
             meth.isclose(imu, 360, abs_tol=tolerance) or
             meth.isclose(imu, -360, abs_tol=tolerance)):
-            logging.info("In a straight, continue as normal")
+            print("In a straight, continue as normal")
 
             
             #* If its in the straights keep moving FWD
