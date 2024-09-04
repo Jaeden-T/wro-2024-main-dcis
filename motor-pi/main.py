@@ -13,6 +13,7 @@ mode = Button(22)
 servo.angle = 45
 servo.angle = 70
 servo.angle = 20
+servo.angle = 45
 
 button.wait_for_press()
 print("Button pressed")
