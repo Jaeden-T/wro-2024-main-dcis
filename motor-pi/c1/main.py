@@ -127,10 +127,17 @@ def challenge1Movement():
                     else:
                         servo.angle = 30
             else:
-                print("\n*5")
-                print("Servo Angle Set")
-                servo.angle = 75
-        
+                
+                if (dataStoreObjectArray[-1].ult_E - dataStoreObjectArray[-1].ult_W) > 10:
+                
+                    print("\n*5")
+                    print("Servo Angle Set")
+                    servo.angle = 20
+                if (dataStoreObjectArray[-1].ult_W - dataStoreObjectArray[-1].ult_E) > 10:
+                
+                    print("\n*5")
+                    print("Servo Angle Set")
+                    servo.angle = 75
         
         # #* When not in the straights, eg major turn 
         # else:
