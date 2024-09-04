@@ -55,7 +55,7 @@ def calcWallType(data: DataStoreObject, theCar: car):
         return 1
     
 
-def challenge1Movement(config):
+def challenge1Movement():
 
 
     motor = gpio.Motor(forward=23, backward=24, enable=25)
@@ -107,24 +107,24 @@ def challenge1Movement(config):
                 logging.info("In a straight, continue as normal")
 
                 
-                #* If its in the straights keep moving FWD
-                while dataStoreObjectArray[-1].ult_N > WALLFWD:
-                    if meth.close(dataStoreObjectArray[-1].ult_E, dataStoreObjectArray[-1].ult_W, abs_tol=2): #* If W and E are close, keeping moving fwd
-                        theCar.forward(CARSPEED)
+                # #* If its in the straights keep moving FWD
+                # while dataStoreObjectArray[-1].ult_N > WALLFWD:
+                #     if meth.close(dataStoreObjectArray[-1].ult_E, dataStoreObjectArray[-1].ult_W, abs_tol=2): #* If W and E are close, keeping moving fwd
+                #         theCar.forward(CARSPEED)
                         
                         
-                    else: #* Else Turn in the direction thats needed
-                        if dataStoreObjectArray[-1].ult_E > dataStoreObjectArray[-1].ult_W:
-                            theCar.servo.value(0.5)
-                        else:
-                            theCar.servo.value(-0.5)
+                #     else: #* Else Turn in the direction thats needed
+                #         if dataStoreObjectArray[-1].ult_E > dataStoreObjectArray[-1].ult_W:
+                #             theCar.servo.value(0.5)
+                #         else:
+                #             theCar.servo.value(-0.5)
                 
                 
-                if dataStoreObjectArray[-1].ult_N < WALLFWD:
-                    if ROTATIONDIRECTION == 2:
-                        theCar.servo.value(1)
-                    else:
-                        theCar.servo.value(-1)
+                # if dataStoreObjectArray[-1].ult_N < WALLFWD:
+                #     if ROTATIONDIRECTION == 2:
+                #         theCar.servo.value(1)
+                #     else:
+                #         theCar.servo.value(-1)
             
             
             
