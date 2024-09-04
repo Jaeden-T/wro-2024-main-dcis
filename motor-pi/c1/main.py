@@ -37,7 +37,7 @@ FREQUENCY = 1
 #TODO Add API ENd Point to other pi 
 
 #* Note to organsiers/markers: The pi is not over wifi but over withenet patch cables 
-endPoint = "`"
+endPoint = "pi3Sense.local"
 
 
 # 10 CM  before turn
