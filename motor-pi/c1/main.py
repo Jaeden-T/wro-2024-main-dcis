@@ -56,6 +56,7 @@ def calcWallType(data: DataStoreObject, theCar: car):
     
 
 def challenge1Movement():
+    print("C1 LOADED")
     mapped = False
 
     motor = gpio.Motor(forward=23, backward=24, enable=25)
@@ -76,6 +77,7 @@ def challenge1Movement():
 
 
     while True:
+        print("C1 TRUTH LOOP")
         try:
             data = requests.get("pi3Sense.local:8000/ult").json()
             logging.info(data)
