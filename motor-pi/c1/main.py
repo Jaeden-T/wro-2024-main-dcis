@@ -137,7 +137,7 @@ def challenge1Movement():
             #* Once it exits the loop stop turning and reutrn to straight
             servo.angle = 45
         
-        if meth.isClose(dataStoreObjectArray[-1].imu, 360):
+        if meth.isclose(dataStoreObjectArray[-1].imu, 360):
             logging.debug("1 lap done ")
             roundsDone += 1
             mapped = True
