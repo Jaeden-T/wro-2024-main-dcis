@@ -76,7 +76,6 @@ def challenge1Movement():
     
     # Segement 0 is the oriign
     currentSegement = 0
-    data = requests.get("http://pi3Sense.local:8000/ult").json()
 
     while True:
         print("C1 TRUTH LOOP")
@@ -84,6 +83,7 @@ def challenge1Movement():
             data = requests.get("http://pi3Sense.local:8000/ult").json()
             imu = requests.get("http://pi3Sense.local:8000/imuData").json()
             dataStoreObjectArray.append(DataStoreObject(data["ult_N"]*100, data["ult_S"]*100, data["ult_E"]*100, data["ult_W"]*100, imu["z_rotation"]))
+            print(dataStoreObjectArray[-1])
         except requests.exceptions.RequestException as e:
             logging.error(e)
         
