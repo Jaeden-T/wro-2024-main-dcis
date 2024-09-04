@@ -76,7 +76,7 @@ def challenge1Movement(servo):
     
     # Segement 0 is the oriign
     currentSegement = 0
-
+    servo.angle = 45
     while True:
         if roundsDone == 3:
             return 0
@@ -107,13 +107,16 @@ def challenge1Movement(servo):
             servo.angle = 45
             print("In a straight, continue as normal")
             motor.forward(CARSPEED)
-            if meth.isclose(dataStoreObjectArray[-1].imu, 360):
+            if meth.isclose(dataStoreObjectArray[-1].imu, 360, abs_tol=5):
                 print("1 lap done ")
                 roundsDone += 1
             
             #* If its in the straights keep moving FWD
             if dataStoreObjectArray[-1].ult_N > WALLFWD:
-                if meth.isclose(dataStoreObjectArray[-1].ult_E, dataStoreObjectArray[-1].ult_W, abs_tol=1): #* If W and E are close, keeping moving fwd
+                print("E and W")
+                print(dataStoreObjectArray[-1].ult_E)
+                print(dataStoreObjectArray[-1].ult_W)
+                if meth.isclose(dataStoreObjectArray[-1].ult_E, dataStoreObjectArray[-1].ult_W, abs_tol=2): #* If W and E are close, keeping moving fwd
                     servo.angle - 45
                     
                     
