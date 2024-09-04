@@ -194,7 +194,7 @@ def challenge1Movement():
 
                     
             
-            time.wait(FREQUENCY)
+            time.sleep(FREQUENCY)
 
 
     
