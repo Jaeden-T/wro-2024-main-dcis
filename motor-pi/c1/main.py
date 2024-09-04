@@ -59,7 +59,7 @@ def calcWallType(data: DataStoreObject, theCar: car):
 def challenge1Movement(config):
 
 
-    motor = gpio.Motor(config.getint("Others", "in1"), config.getint("Others", "in2"))
+    motor = gpio.Motor(forward=23, backward=24, enable=25)
     
     # wallMode[1] = The place infront etc
     wallMode = [0,0,0,0]
