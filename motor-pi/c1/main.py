@@ -36,7 +36,7 @@ FREQUENCY = 1
 #TODO Add API ENd Point to other pi 
 
 #* Note to organsiers/markers: The pi is not over wifi but over withenet patch cables 
-endPoint = "pi3Sense.local"
+
 
 
 # 10 CM  before turn
@@ -77,7 +77,7 @@ def challenge1Movement():
 
     while True:
         try:
-            data = requests.get(endPoint).json()
+            data = requests.get("pi3Sense.local:8000/ult").json()
             logging.info(data)
             dataStoreObjectArray.append(DataStoreObject(data["ult_N"], data["ult_S"], data["ult_E"], data["ult_W"],data["imu"]))
         except requests.exceptions.RequestException as e:
