@@ -123,18 +123,11 @@ def challenge1Movement():
                 #     else:
                 #         theCar.servo.value(-0.5)
             
-            
-            if dataStoreObjectArray[-1].ult_N < WALLFWD:
-                if ROTATIONDIRECTION == 2:
-                    theCar.servo.value(1)
-                else:
-                    theCar.servo.value(-1)
-        
         
         
         #* When not in the straights, eg major turn 
         else:
-            logging.info("Is prolly turning")
+            print("Is prolly turning")
             #* Wait till its close to the value
             motor.forward(CARSPEED)
             time.sleep(3)
