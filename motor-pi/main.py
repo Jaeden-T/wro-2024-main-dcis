@@ -4,15 +4,18 @@ from c1.main import challenge1Movement
 calibrate = requests.get("http://pi3Sense.local:8000/calibrate")
 print(calibrate)
 import gpiozero as gpio
-
+import time
 servo= gpio.AngularServo(27, min_angle=0, max_angle=90, initial_angle=45)
 
 button = Button(26)
 mode = Button(22)
 
 servo.angle = 45
+time.sleep(1)
 servo.angle = 70
+time.sleep(1)
 servo.angle = 20
+time.sleep(1)
 servo.angle = 45
 
 button.wait_for_press()

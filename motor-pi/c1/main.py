@@ -79,6 +79,7 @@ def challenge1Movement(servo):
     servo.angle = 45
     while True:
         if roundsDone == 3:
+            motor.stop()
             return 0
         print("C1 TRUTH LOOP")
         try:
