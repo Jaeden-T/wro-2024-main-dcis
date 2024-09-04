@@ -109,6 +109,7 @@ def challenge1Movement():
             #* Assuming thats its in the straights 
             #TODO Add a constant for abs_ tol of turning to prevent false flagging
         tolerance = 5
+        imu = dataStoreObjectArray[-1].imu
         if(meth.isclose(imu, 0, abs_tol=tolerance) or 
             meth.isclose(imu, 90, abs_tol=tolerance) or 
             meth.isclose(imu, -90, abs_tol=tolerance) or 
