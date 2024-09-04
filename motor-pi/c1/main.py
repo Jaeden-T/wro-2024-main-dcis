@@ -108,7 +108,7 @@ def challenge1Movement():
             #* Assuming thats its in the straights 
             #TODO Add a constant for abs_ tol of turning to prevent false flagging
         
-        if meth.isclose(dataStoreObjectArray[-1].imu, 0 )or  meth.isclose(dataStoreObjectArray[-1].imu, 90) or meth.isclose(dataStoreObjectArray[-1].imu, 180) or meth.isclose(dataStoreObjectArray[-1].imu, 360):
+        if meth.isclose(dataStoreObjectArray[-1].imu, 0, rel_tol =5 )or  meth.isclose(dataStoreObjectArray[-1].imu, 90) or meth.isclose(dataStoreObjectArray[-1].imu, 180) or meth.isclose(dataStoreObjectArray[-1].imu, 360):
             logging.info("In a straight, continue as normal")
 
             
@@ -129,7 +129,7 @@ def challenge1Movement():
                 print("Servo Angle Set")
                 servo.angle = 75
         
-        
+        eks
         # #* When not in the straights, eg major turn 
         # else:
         #     print("Is prolly turning")
