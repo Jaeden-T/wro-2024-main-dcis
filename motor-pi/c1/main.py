@@ -77,9 +77,9 @@ def challenge1Movement():
 
 
     while True:
-        print("C1 TRUTH LOOP")
+        logging.info("C1 TRUTH LOOP")
         try:
-            data = requests.get("pi3Sense.local:8000/ult").json()
+            data = requests.get("http://pi3Sense.local:8000/ult").json()
             logging.info(data)
             dataStoreObjectArray.append(DataStoreObject(data["ult_N"], data["ult_S"], data["ult_E"], data["ult_W"],data["imu"]))
         except requests.exceptions.RequestException as e:
