@@ -120,6 +120,8 @@ def challenge1Movement():
                     
 
                 else: #* Else Turn in the direction thats needed
+                    
+                    servo.angle = 45
                     if dataStoreObjectArray[-1].ult_E > dataStoreObjectArray[-1].ult_W:
                         servo.angle = 60
                     else:
