@@ -30,7 +30,7 @@ CARSPEED = 1
 #* Turn Prep
 turnPrepDistance = 0
 #* Data Get Frequiency
-FREQUENCY = 3
+FREQUENCY = 1
 
 #TODO Add API ENd Point to other pi 
 
