@@ -59,8 +59,7 @@ def challenge1Movement():
     print("C1 LOADED")
     mapped = False
 
-    calibrate = requests.get("http://pi3Sense.local:8000/calibrate")
-    print(calibrate)
+
     motor = gpio.Motor(forward=23, backward=24, enable=25)
     
     roundsDone = 0
@@ -102,7 +101,7 @@ def challenge1Movement():
             meth.isclose(imu, 360, abs_tol=tolerance) or
             meth.isclose(imu, -360, abs_tol=tolerance)):
             print("In a straight, continue as normal")
-
+            motor.forward(CARSPEED)
             if meth.isclose(dataStoreObjectArray[-1].imu, 360):
                 print("1 lap done ")
                 roundsDone += 1
@@ -111,7 +110,7 @@ def challenge1Movement():
             if dataStoreObjectArray[-1].ult_N > WALLFWD:
                 if meth.isclose(dataStoreObjectArray[-1].ult_E, dataStoreObjectArray[-1].ult_W, abs_tol=1): #* If W and E are close, keeping moving fwd
                     servo.angle - 45
-                    motor.forward(CARSPEED)
+                    
                     
 
                 else: #* Else Turn in the direction thats needed 

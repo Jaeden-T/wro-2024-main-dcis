@@ -1,7 +1,8 @@
 from gpiozero import Button
-
+import requests
 from c1.main import challenge1Movement
-
+calibrate = requests.get("http://pi3Sense.local:8000/calibrate")
+print(calibrate)
 button = Button(26)
 mode = Button(22)
 
