@@ -56,7 +56,7 @@ def calcWallType(data: DataStoreObject, theCar: car):
     
 
 def challenge1Movement():
-
+    mapped = False
 
     motor = gpio.Motor(forward=23, backward=24, enable=25)
     
