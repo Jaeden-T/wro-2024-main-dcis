@@ -9,7 +9,7 @@ N = DistanceSensor(echo=16, trigger=24)
 W = DistanceSensor(echo=25, trigger=23)
 E = DistanceSensor(echo=5, trigger=27)
 
-#* Make Defeintiions to update
+#* Make Defeintiions to updatemay
 def getData():
     print("temp")
 
@@ -32,7 +32,7 @@ angle_z = 0.0
 
 last_time = None
 
-def calibrate_gyro(sensor, num_samples=1000):
+def calibrate_gyro(sensor, num_samples=500):
     global gyro_x_offset, gyro_y_offset, gyro_z_offset
 
     gyro_x_offset = 0.0
