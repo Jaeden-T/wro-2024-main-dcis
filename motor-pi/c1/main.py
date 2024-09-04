@@ -22,7 +22,7 @@ logging.basicConfig(
 #* Decaluartion
 # Motor = Motor, need set enable
 # Servo= angular serv
-servo= gpio.AngularServo(17, min_angle=0, max_angle=90, initial_angle=45)
+servo= gpio.AngularServo(27, min_angle=0, max_angle=90, initial_angle=45)
 
 #* carSpeeds
 CARSPEED = 1
@@ -124,6 +124,7 @@ def challenge1Movement():
                     else:
                         servo.angle = 30
             else:
+                print("Servo Angle Set")
                 servo.angle = 75
         
         
