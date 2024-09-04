@@ -108,8 +108,16 @@ def challenge1Movement():
             
             #* Assuming thats its in the straights 
             #TODO Add a constant for abs_ tol of turning to prevent false flagging
-        
-        if meth.isclose(dataStoreObjectArray[-1].imu, 0, rel_tol =5 )or  meth.isclose(dataStoreObjectArray[-1].imu, 90) or meth.isclose(dataStoreObjectArray[-1].imu, 180) or meth.isclose(dataStoreObjectArray[-1].imu, 360):
+        tolerance = 5
+        if(meth.isclose(imu, 0, abs_tol=tolerance) or 
+            meth.isclose(imu, 90, abs_tol=tolerance) or 
+            meth.isclose(imu, -90, abs_tol=tolerance) or 
+            meth.isclose(imu, 180, abs_tol=tolerance) or 
+            meth.isclose(imu, -180, abs_tol=tolerance) or
+            meth.isclose(imu, 270, abs_tol=tolerance) or
+            meth.isclose(imu, -270, abs_tol=tolerance) or
+            meth.isclose(imu, 360, abs_tol=tolerance) or
+            meth.isclose(imu, -360, abs_tol=tolerance)):
             logging.info("In a straight, continue as normal")
 
             
@@ -127,6 +135,8 @@ def challenge1Movement():
                         servo.angle = 60
                     else:
                         servo.angle = 30
+                    
+                    servo.angle = 45
             else:
                 
                 if (dataStoreObjectArray[-1].ult_E - dataStoreObjectArray[-1].ult_W) > 10:

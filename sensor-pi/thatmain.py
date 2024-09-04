@@ -6,8 +6,8 @@ sensor = mpu6050(0x68)
 from time import sleep, time
 S = DistanceSensor(echo=17, trigger=22)
 N = DistanceSensor(echo=16, trigger=24)
-E = DistanceSensor(echo=25, trigger=23)
-W = DistanceSensor(echo=5, trigger=27)
+W = DistanceSensor(echo=25, trigger=23)
+E = DistanceSensor(echo=5, trigger=27)
 
 #* Make Defeintiions to update
 def getData():
