@@ -77,6 +77,8 @@ def challenge1Movement():
     currentSegement = 0
 
     while True:
+        if roundsDone == 3:
+            return 0
         print("C1 TRUTH LOOP")
         try:
             data = requests.get("http://pi3Sense.local:8000/ult").json()
@@ -87,27 +89,8 @@ def challenge1Movement():
             print(dataStoreObjectArray[-1].imu)
         except requests.exceptions.RequestException as e:
             logging.error(e)
-        
-        
-        # if mapped == True:
-        #     if calcWallType(dataStoreObjectArray[-1], theCar) == 1:
-        #         wallMode[currentSegement] == 1
-            
-        #     elif calcWallType(dataStoreObjectArray[-1], theCar) == 0:
-        #         wallMode[currentSegement] == 0
-        #     else:
-        #         wallMode[currentSegement] = 3
-        
-        
-        # #! If mapping false
-        # if mapped == False:
-            
-            #* Imu Check to see if dataStoreObjecctArray[-1].imu is close to 0, 90, 180, 360n values, check it the diffrence is within 5d, if it is then return false
-            
-            
-            #* Assuming thats its in the straights 
-            #TODO Add a constant for abs_ tol of turning to prevent false flagging
         tolerance = 5
+        
         imu = dataStoreObjectArray[-1].imu
         if(meth.isclose(imu, 0, abs_tol=tolerance) or 
             meth.isclose(imu, 90, abs_tol=tolerance) or 
@@ -120,23 +103,24 @@ def challenge1Movement():
             meth.isclose(imu, -360, abs_tol=tolerance)):
             print("In a straight, continue as normal")
 
+            if meth.isclose(dataStoreObjectArray[-1].imu, 360):
+                print("1 lap done ")
+                roundsDone += 1
             
             #* If its in the straights keep moving FWD
             if dataStoreObjectArray[-1].ult_N > WALLFWD:
-                if meth.isclose(dataStoreObjectArray[-1].ult_E, dataStoreObjectArray[-1].ult_W, abs_tol=2): #* If W and E are close, keeping moving fwd
+                if meth.isclose(dataStoreObjectArray[-1].ult_E, dataStoreObjectArray[-1].ult_W, abs_tol=1): #* If W and E are close, keeping moving fwd
                     servo.angle - 45
                     motor.forward(CARSPEED)
                     
 
-                else: #* Else Turn in the direction thats needed
-                    
+                else: #* Else Turn in the direction thats needed 
                     servo.angle = 45
                     if dataStoreObjectArray[-1].ult_E > dataStoreObjectArray[-1].ult_W:
                         servo.angle = 60
                     else:
                         servo.angle = 30
                     
-                    servo.angle = 45
             else:
                 
                 if (dataStoreObjectArray[-1].ult_E - dataStoreObjectArray[-1].ult_W) > 10:
@@ -150,22 +134,18 @@ def challenge1Movement():
                     print("Servo Angle Set")
                     servo.angle = 75
         
-        # #* When not in the straights, eg major turn 
-        # else:
-        #     print("Is prolly turning")
-        #     #* Wait till its close to the value
-        #     motor.forward(CARSPEED)
-        #     time.sleep(3)
-        #     if not (meth.isclose(dataStoreObjectArray[-1].imu, 0 )or  meth.isclose(dataStoreObjectArray[-1].imu, 90) or meth.isclose(dataStoreObjectArray[-1].imu, 180) or meth.isclose(dataStoreObjectArray[-1].imu, 360)):
-        #         motor.forward(CARSPEED)
+        #* When not in the straights, eg major turn 
+        else:
+            print("Is prolly turning")
+            #* Wait till its close to the value
+            motor.forward(CARSPEED)
+            if not (meth.isclose(dataStoreObjectArray[-1].imu, 0 )or  meth.isclose(dataStoreObjectArray[-1].imu, 90) or meth.isclose(dataStoreObjectArray[-1].imu, 180) or meth.isclose(dataStoreObjectArray[-1].imu, 360)):
+                motor.forward(CARSPEED)
                 
-        #     #* Once it exits the loop stop turning and reutrn to straight
-        #     servo.angle = 45
+            #* Once it exits the loop stop turning and reutrn to straight
+            servo.angle = 45
         
-        if meth.isclose(dataStoreObjectArray[-1].imu, 360):
-            logging.debug("1 lap done ")
-            roundsDone += 1
-            
+
     # if mapped == True:
     #     while dataStoreObjectArray[-1].ult_N > WALLFWD:
     #         theCar.forward(CARSPEED)
